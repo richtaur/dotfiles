@@ -1,0 +1,45 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Appearance
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colors desert256
+
+set columns=120 " width
+set lines=52 " height
+
+set guifont=Monaco:h16
+"set guifont=CentSchBook\ Mono:h16.00
+"set guifont=DejaVu\ Sans\ Mono:h24.00
+
+" No idea WTF these are doing
+set guioptions-=T
+set guioptions+=b
+
+" I hate code-folding in Vim, it's rubbish :(
+set fdm=marker
+set foldclose=all
+set nofoldenable
+
+" No idea
+iab YDATE <C-R>=strftime("%a %b %d %T %Y")<CR>
+let g:explVertical=1
+
+" Some magic stuff from Dav, dunno
+function! GetFunctions()
+	let g:explWinSize=25
+	"execute ":set columns=300"
+	"execute "silent vertical sp"
+    "execute "silent vertical resize 300"
+	execute "!~/.bin/parsefunctions.php %"
+	execute ":vert sp /tmp/vimTmp"
+	execute ":1"
+endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Archive
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" execute ":cd ~/www/"
+" set gfn=fixedsysttf\ 18
+" set gfn=Bitstream\ Vera\ Sans\ Mono\ 12
+" Saves onblur:
+" :au FocusLost * :wa
