@@ -3,13 +3,13 @@
 ###############################################################################
 
 alias '..'='cd ..'
-alias bashrc='vim ~/.bash_profile; source $_'
+alias bashrc='/usr/bin/vim ~/.bash_profile; source $_'
 alias gcam='git commit -a -m'
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
 alias gpom='git push origin master'
 alias hasinternet='ping google.com'
 alias hosts='sudo vim /etc/hosts'
-alias httpconf='sudo vim /Applications/MAMP/conf/apache/httpd.conf; sudo apachectl restart'
+alias httpconf='sudo vim /Applications/MAMP/conf/apache/httpd.conf'
 alias ip='ifconfig | grep 192'
 alias ll='ls -lah'
 alias sshsh='ssh richter@209.20.66.182'
@@ -20,6 +20,10 @@ alias top='top -o cpu'
 alias vim='mvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias yui-min='java -jar ~/dev/code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
+
+# LDG
+alias ldg='cd ~/Dropbox/Lost\ Decade'
+alias onslaught='cd ~/dev/lost_decade/onslaught'
 
 ###############################################################################
 # Appearance
@@ -61,6 +65,8 @@ untargz() {
 
 alias code-review='~/svn/raptrweb/upload.py --reviewers=geoff@raptr.com --send_mail'
 alias qa='ssh root@qa.raptr.com'
+
+export GXL_INSTANCE_ROOT=/Users/hackett
 
 cp-preview() {
 	scp $1 root@heqa1:/gxl/preview/raptrweb/$1
