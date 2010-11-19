@@ -7,31 +7,37 @@
 ## Preferences
 
 * Adium:
-	- Prefs / Appearance / Emoticons / None
-	- Prefs / Advanced / Contact List / Tooltips / [ ] Show contact information tooltips
+	- Prefs / Appearance / Emoticons: None
+	- Prefs / Advanced / Contact List / Tooltips / [ ] Show contact information tooltips (uncheck)
 * Adobe Photoshop:
-	- Prefs / Performance / History & Cache / History States: 200 (arbitrary; just a high number!)
-	- units and rulersr pixel pixels
+	- File / New / Background Contents: Transparent
+	- Prefs / General / Image Interppolation: Bilinear
+	- Prefs / General / Units &amp; Rulers / Rulers: pixels
+	- Prefs / General / Units &amp; Rulers / Type: pixels
+	- Prefs / Performance / History &amp; Cache / History States: 200 (arbitrary; just a high number!)
 * Chrome:
 	- Basics / Reopen last pages
 	- Home page: Use the New Tab page
 	- Personal stuff / Never save passwords …
 * Colloquy
-	- Prefs / Alerts / [ ] Mute all notification sounds
+	- Prefs / Alerts / [ ] Mute all notification sounds (uncheck)
 * Dashboard: don't ever show
 * Finder
-	- Prefs / Advanced / [ ] Show all filename extensions
-	- Prefs / Advanced / [ ] Show warning before changing an extension
+	- Prefs / Advanced / [ ] Show all filename extensions (uncheck)
+	- Prefs / Advanced / [ ] Show warning before changing an extension (uncheck)
 	- Prefs / Advanced / When performing a search: Search the Current Folder
 * iTunes:
-	- Prefs / Advanced / [ ] Copy files to iTunes Media folder …
+	- Prefs / Advanced / [ ] Copy files to iTunes Media folder … (uncheck)
 * Keychain Access / Prefs / General / [x] Show Status in Menu Bar
 * Safari:
 	Prefs / Advanced / [x] Show Develop menu in menu bar
-* System
-	- System prefs / Keyboard / Keyboard Shortcuts: Full Keyboard Access = All controls
+* System Prefs:
+	- Desktop & Screen Saver / Screen Saver / Screen Savers / Computer Name
+		FUCK WHERE IS BLANK SCREEN NOOOOO
+	- Keyboard / Keyboard Shortcuts / Front Row / [ ] Hide and show Front Row (uncheck)
+	- Keyboard / Keyboard Shortcuts: Full Keyboard Access = All controls
 		* Keyboard / Key Repeat Rate: Fastest
-	- System prefs / Sharing / Computer Name
+	- Sharing / Computer Name
+	- Spotlight / disable "Spotlight menu keyboard shortcut" and "window" too
 	- Trackpad prefs: tap to click
 		* Prefs / Trackpad / Screen Zoom / Options / [ ] Smooth images … (uncheck)
-	- System prefs / Spotlight / disable "Spotlight menu keyboard shortcut" and "window" too

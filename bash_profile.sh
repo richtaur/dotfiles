@@ -4,6 +4,7 @@
 
 alias '..'='cd ..'
 alias bashrc='/usr/bin/vim ~/.bash_profile; source $_'
+alias dev='cd ~/dev'
 alias gcam='git commit -a -m'
 alias glog='git log --graph --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
 alias gpom='git push origin master'
@@ -13,6 +14,7 @@ alias httpconf='sudo vim /Applications/MAMP/conf/apache/httpd.conf'
 alias ip='ifconfig | grep 192'
 alias ll='ls -lah'
 alias sshsh='ssh richter@209.20.66.182'
+alias todo='vim ~/dev/TODO.md'
 
 # Applications
 alias telog='tail -f /Applications/MAMP/logs/php_error.log'
@@ -63,14 +65,22 @@ untargz() {
 # Raptr
 ###############################################################################
 
+alias cassandra='/Users/hackett/dev/raptr/apache-cassandra-0.6.5/bin/cassandra -f'
 alias code-review='~/svn/raptrweb/upload.py --reviewers=geoff@raptr.com --send_mail'
 alias qa='ssh root@qa.raptr.com'
+alias raptr='cd ~/dev/raptr/raptrweb'
 
 export GXL_INSTANCE_ROOT=/Users/hackett
 
 cp-preview() {
 	scp $1 root@heqa1:/gxl/preview/raptrweb/$1
 	scp $1 root@heqa2:/gxl/preview/raptrweb/$1
+}
+
+lameit() {
+	lame -V 4 $1.wav
+	mv $1.wav.mp3 $1.mp3
+	rm $1.wav
 }
 
 cp-prd() {
