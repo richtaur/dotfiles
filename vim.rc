@@ -4,6 +4,9 @@
 
 set nocompatible " SET THIS FIRST! use new hotness that's not compatible with Vi
 
+" Oh SNAP ; instead of :
+nnoremap ; :
+
 " Turn on syntax highlighting
 :syntax on
 syntax sync fromstart
@@ -29,6 +32,7 @@ set noswapfile
 
 " Everything else
 set backspace=indent,eol,start " allow backspacing over everything useful
+set encoding=utf-8
 set exrc " read .vimrc, .exrc and .gvimrc
 set history=1000 " remember the last 1000 commands
 set incsearch " show search matches as you type
@@ -45,6 +49,7 @@ set showmatch " show matching parenthesis
 set title " change the terminal's title
 set undolevels=5000 " 5000 levels of undo
 set vb " verbose error messaging just in case
+set visualbell
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language-specific stuff
