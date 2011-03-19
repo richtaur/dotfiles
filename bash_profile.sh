@@ -13,10 +13,12 @@ alias httpconf='sudo vim /Applications/MAMP/conf/apache/httpd.conf'
 alias ip='ifconfig | grep 192'
 alias ll='ls -lah'
 alias playground='vim ~/dev/playground/index.html'
+alias projects='cd ~/dev/projects'
 alias sshsh='ssh richter@209.20.66.182'
 alias todo='vim ~/dev/TODO.md'
 
 # git
+alias gdiff='git diff'
 alias gpom='git push origin master'
 alias gpull='git pull origin master'
 alias gpush='git push origin master'
@@ -55,6 +57,10 @@ export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sb
 ###############################################################################
 # Macros
 ###############################################################################
+
+lld() {
+	ls -lah $1 | grep ^d
+}
 
 ogg() {
 	vlc -I dummy $1 --sout="#transcode{scale=1,acodec=vorbis,ab=192,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=$2}" vlc://quit
@@ -106,10 +112,6 @@ cp-custom() {
 	scp $2 root@$1:/gxl/prd/raptrweb/$2
 }
 
-###############################################################################
-# Archive
-###############################################################################
-
-#alias mxmlc='/Users/hackett/Documents/apps/Flex_SDK_3/bin/mxmlc'
-#alias syn='synergyc -f --name Hackett-Mac 192.168.6.234'
-#export PATH="$HOME/Documents/apps/soylatte16-1.0.3/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include:/usr/local/X11R6/include:$HOME/Documents/apps/android-sdk-mac_86/tools"
+raptrbranch() {
+	svn co svn+ssh://mom.raptr.com/gxl/svn/repos/raptr/branches/raptrweb/$1
+}
