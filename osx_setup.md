@@ -19,6 +19,7 @@
 	- Basics / Reopen last pages
 	- Home page: Use the New Tab page
 	- Personal stuff / Never save passwords …
+	- about:flags / Confirm to Quit / Enable
 * Colloquy
 	- Prefs / Alerts / [ ] Mute all notification sounds (uncheck)
 * Dashboard: don't ever show
