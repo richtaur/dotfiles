@@ -9,6 +9,7 @@
 * Adium:
 	- Prefs / Appearance / Emoticons: None
 	- Prefs / Advanced / Contact List / Tooltips / [ ] Show contact information tooltips (uncheck)
+	- Prefs / Events / Event preset: Audio Notifications / Sound set: None
 * Adobe Photoshop:
 	- File / New / Background Contents: Transparent
 	- Prefs / General / Image Interppolation: Bilinear
@@ -20,11 +21,13 @@
 	- Home page: Use the New Tab page
 	- Personal stuff / Never save passwords …
 	- about:flags / Confirm to Quit / Enable
-* Colloquy
-	- Prefs / Alerts / [ ] Mute all notification sounds (uncheck)
 * Dashboard: don't ever show
+* Divvy
+	- Prefs / [x] Start Divvy at login
+	- Prefs / [x] Use global shortcut to display panel
+	- Prefs / [x] Automatically check for updates
 * Finder
-	- Prefs / Advanced / [ ] Show all filename extensions (uncheck)
+	- Prefs / Advanced / [x] Show all filename extensions
 	- Prefs / Advanced / [ ] Show warning before changing an extension (uncheck)
 	- Prefs / Advanced / When performing a search: Search the Current Folder
 * iTunes:
@@ -39,6 +42,8 @@
 	- Keyboard / Keyboard Shortcuts: Full Keyboard Access = All controls
 		* Keyboard / Key Repeat Rate: Fastest
 	- Sharing / Computer Name
-	- Spotlight / disable "Spotlight menu keyboard shortcut" and "window" too
+	- Spotlight
+		* [ ] Spotlight menu keyboard shortcut
+		* [ ] Spotlight window keyboard shortcut
 	- Trackpad prefs: tap to click
 		* Prefs / Trackpad / Screen Zoom / Options / [ ] Smooth images … (uncheck)

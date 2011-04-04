@@ -13,15 +13,16 @@ set guifont=Monaco:h16
 " No idea WTF these are doing
 set guioptions-=T
 set guioptions+=b
+iab YDATE <C-R>=strftime("%a %b %d %T %Y")<CR>
+let g:explVertical=1
 
 " I hate code-folding in Vim, it's rubbish :(
 set fdm=marker
 set foldclose=all
 set nofoldenable
 
-" No idea
-iab YDATE <C-R>=strftime("%a %b %d %T %Y")<CR>
-let g:explVertical=1
+" Show file types in menu
+let do_syntax_sel_menu = 1|runtime~! synmenu.vim|aunmenu &Syntax.&Show\ filetypes\ in\ menu
 
 " Some magic stuff from Dav, dunno
 function! GetFunctions()
