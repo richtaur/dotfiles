@@ -29,7 +29,6 @@ alias gstat='git status'
 # Applications
 alias telog='tail -f /Applications/MAMP/logs/php_error.log'
 alias top='top -o cpu'
-alias vim='mvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias yui-min='java -jar ~/dev/code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 
