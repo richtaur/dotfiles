@@ -4,6 +4,8 @@
 
 * `defaults write -g NSNavPanelExpandedStateForSaveMode -bool TRUE`
 * `defaults write com.apple.Safari IncludeDebugMenu YES`
+* `git config --global user.name "Matt Hackett"`
+* `git config --global user.email "richtaur@gmail.com"`
 
 ## Preferences
 
