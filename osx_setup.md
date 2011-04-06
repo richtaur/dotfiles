@@ -12,6 +12,7 @@
 
 * Adium
 	- Appearance / Emoticons: None
+	- Appearance / Automatic Sizing: / [x] Size to fit vertically
 	- Advanced / Contact List / Tooltips / [ ] Show contact information tooltips
 	- Events / Event preset: Audio Notifications / Sound set: None
 	- Messages / Regular Chats / Text Display: / Set Font ... / HUGE FONT

@@ -1,7 +1,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colors koehler
+
+colors dante
+"colors blackboard
+"colors koehler
 
 set columns=120 " width
 set lines=52 " height

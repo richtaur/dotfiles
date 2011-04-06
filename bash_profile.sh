@@ -5,6 +5,7 @@
 alias '..'='cd ..'
 alias bashrc='/usr/bin/vim ~/.bash_profile; source $_'
 alias dev='cd ~/dev'
+alias gvimrc='vim ~/.gvimrc'
 alias hasinternet='ping google.com'
 alias hosts='sudo vim /etc/hosts'
 alias ip='ifconfig | grep 192'
@@ -29,6 +30,7 @@ alias gstat='git status'
 # Applications
 alias telog='tail -f /Applications/MAMP/logs/php_error.log'
 alias top='top -o cpu'
+alias vim='mvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias yui-min='java -jar ~/dev/code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 
