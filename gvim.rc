@@ -1,14 +1,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colors desert256
+colors koehler
 
 set columns=120 " width
 set lines=52 " height
 
-set guifont=Monaco:h16
+set guifont=Monaco:h20
 "set guifont=CentSchBook\ Mono:h16.00
-"set guifont=DejaVu\ Sans\ Mono:h24.00
 
 " No idea WTF these are doing
 set guioptions-=T
