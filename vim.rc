@@ -30,6 +30,9 @@ set tabstop=2
 set nobackup
 set noswapfile
 
+" Remap :W to :w
+command W w
+
 " Everything else
 set backspace=indent,eol,start " allow backspacing over everything useful
 set encoding=utf-8
@@ -46,7 +49,7 @@ set number " show line numbers
 set ruler
 set showcmd
 set showmatch " show matching parenthesis
-set title " change the terminal's title
+set title " change the window's title to the current filename
 set undolevels=5000 " 5000 levels of undo
 set vb " verbose error messaging just in case
 set visualbell

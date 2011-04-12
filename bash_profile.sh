@@ -36,6 +36,7 @@ alias yui-min='java -jar ~/dev/code/java/yuicompressor-2.4.2/build/yuicompressor
 
 # LDG
 alias devandroid='cd ~/dev/sdk/android-sdk-mac_x86/tools'
+alias devgc='cd ~/dev/game_closure'
 alias devldg='cd ~/dev/lost_decade'
 alias ldg='cd ~/Dropbox/Lost\ Decade'
 alias onslaught='cd ~/dev/lost_decade/onslaught'
@@ -44,17 +45,28 @@ alias onslaught='cd ~/dev/lost_decade/onslaught'
 # Appearance
 ###############################################################################
 
-PS1="[\e[0;32m\]\u:\W\[\e[m\]]\[\e[1;32m\]>\[\e[m\] "
 
 ###############################################################################
-# Exports
+# Global exports
 ###############################################################################
 
 export CLICOLOR="1"
 export EDITOR="/usr/bin/vim"
 #export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include:/opt/android-sdk/tools:/opt/android-sdk/platforms/android-3/tools"
-# This PATH includes depot_tools (for building Chromium)
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include:/opt/android-sdk/tools:/opt/android-sdk/platforms/android-3/tools:/Users/hackett/Downloads/home/chrome-svn/tarball/depot_tools"
+export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include"
+
+# Set the command prompt, eg:
+# [richtaur:Lost Decade]> cd ..
+export PS1="[\e[0;32m\]\u:\W\[\e[m\]]\[\e[1;32m\]>\[\e[m\] "
+#export PS1="[\u@\h \W]\\$ "
+
+# Set iTerm's tab titles
+if HOSTNAME=="173-228-6-154.dsl.dynamic.sonic.net"; then
+	CP_HOSTNAME="Belmont"
+else
+	CP_HOSTNAME=HOSTNAME
+fi
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${CP_HOSTNAME%%.*}: ${PWD/#$HOME/~}\007"'
 
 ###############################################################################
 # Macros
