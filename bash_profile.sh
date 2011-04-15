@@ -28,7 +28,7 @@ alias gpush='git push origin master'
 alias gstat='git status'
 
 # Applications
-alias telog='tail -f /Applications/MAMP/logs/php_error.log'
+alias telog='tail -f /var/log/apache2/error_log'
 alias top='top -o cpu'
 alias vim='mvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
