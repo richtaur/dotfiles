@@ -18,11 +18,14 @@
 	- Events / Event preset: Audio Notifications / Sound set: None
 	- Messages / Regular Chats / Text Display: / Set Font … / HUGE FONT
 * Adobe Photoshop (CS5)
-	- File / New / Background Contents: Transparent
 	- General / Image Interppolation: Bilinear
+	- Performance / History &amp; Cache / History States: 200 (arbitrary; just a high number!)
 	- Units &amp; Rulers / Rulers: pixels
 	- Units &amp; Rulers / Type: pixels
-	- Performance / History &amp; Cache / History States: 200 (arbitrary; just a high number!)
+	- Guide, Grids & Slices / Grid
+		* Gridline Every: 32 pixels
+		* Subdivisions: 2
+	- File / New / Background Contents: Transparent
 	- View / Show / [ ] Pixel Grid
 * Chrome
 	- Basics / Reopen last pages
@@ -59,6 +62,10 @@
 	- Keyboard / Keyboard Shortcuts: Full Keyboard Access = All controls
 		* Keyboard / Key Repeat Rate: Fastest
 * Personal
+	- Desktop & Screen Saver / Screen Saver / Hot Corners…
+		* Top left: Put Display to Sleep
+		* Top right: All Windows
+		* Bottom right: Application Windows
 	- Expose & Spaces / Expose / Dashboard / Hide and show: / -
 	- Spotlight
 		* [ ] Spotlight menu keyboard shortcut
