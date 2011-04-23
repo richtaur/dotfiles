@@ -4,11 +4,13 @@
 
 alias '..'='cd ..'
 alias bashrc='/usr/bin/vim ~/.bash_profile; source $_'
+alias c='clear'
 alias dev='cd ~/dev'
 alias gvimrc='vim ~/.gvimrc'
 alias hasinternet='ping google.com'
 alias hosts='sudo vim /etc/hosts'
 alias ip='ifconfig | grep 192'
+alias l='ll'
 alias ll='ls -lah'
 alias p='cd ~/dev/projects'
 alias playground='cd ~/dev/playground; vim index.html; cd -'

@@ -54,13 +54,6 @@
 
 ## System Preferenes
 
-* Internet & Wireless
-	- Sharing / Computer Name: $AWESOME
-	- Sharing / [x] Web Sharing
-* Hardware
-	- Keyboard / Keyboard Shortcuts / Front Row / [ ] Hide and show Front Row
-	- Keyboard / Keyboard Shortcuts: Full Keyboard Access = All controls
-		* Keyboard / Key Repeat Rate: Fastest
 * Personal
 	- Desktop & Screen Saver / Screen Saver / Hot Corners…
 		* Top left: Put Display to Sleep
@@ -70,10 +63,25 @@
 	- Spotlight
 		* [ ] Spotlight menu keyboard shortcut
 		* [ ] Spotlight window keyboard shortcut
-* Trackpad
-	- [x] Tap to Click
-	- Screen Zoom / Options … / [ ] Smooth images …
-* Wacom Tablet
-	- Tool: / Functions / Touch Strip / Keystroke…
-		* Up = command+
-		* Down = command-
+* Hardware
+	- Keyboard / Keyboard Shortcuts / Front Row / [ ] Hide and show Front Row
+	- Keyboard / Keyboard Shortcuts: Full Keyboard Access = All controls
+		* Keyboard / Key Repeat Rate: Fastest
+	- Trackpad
+		* [x] Tap to Click
+		* Screen Zoom / Options … / [ ] Smooth images …
+* Internet & Wireless
+	- Sharing / Computer Name: $AWESOME
+	- Sharing / [x] Web Sharing
+* System
+	- Accounts / My Account / Login Items
+		* Alfred
+		* Divvy
+		* Dropbox
+		* Flux
+		* Growl
+* Other
+	- Wacom Tablet
+		* Tool: / Functions / Touch Strip / Keystroke…
+			- Up = command+
+			- Down = command-
