@@ -2,21 +2,24 @@
 # Aliases
 ###############################################################################
 
-alias '..'='cd ..'
 alias bashrc='/usr/bin/vim ~/.bash_profile; source $_'
 alias c='clear'
-alias dev='cd ~/dev'
 alias gvimrc='vim ~/.gvimrc'
 alias hasinternet='ping google.com'
 alias hosts='sudo vim /etc/hosts'
 alias ip='ifconfig | grep 192'
 alias l='ll'
 alias ll='ls -lah'
-alias p='cd ~/dev/projects'
 alias playground='cd ~/dev/playground; vim index.html; cd -'
 alias sshsh='ssh richter@209.20.66.182'
 alias todo='vim ~/dev/TODO.md'
 alias vimrc='vim ~/.vimrc'
+
+# navivation
+alias '..'='cd ..'
+alias art='cd ~/dev/art'
+alias dev='cd ~/dev'
+alias p='cd ~/dev/projects'
 
 # git
 alias gc-m='git commit -m'
@@ -104,29 +107,7 @@ untargz() {
 }
 
 ###############################################################################
-# Raptr
+# Notes
 ###############################################################################
 
 # svn co svn+ssh://mom.raptr.com/gxl/svn/repos/raptr/branches/phoenix/alpha_6
-
-alias cassandra='/Users/hackett/dev/raptr/apache-cassandra-0.6.5/bin/cassandra -f'
-alias qa='ssh root@qa.raptr.com'
-alias raptr='cd ~/dev/raptr/raptrweb'
-
-export GXL_INSTANCE_ROOT=/Users/hackett
-
-cp-preview() {
-	scp $1 root@heqa1:/gxl/preview/raptrweb/$1
-	scp $1 root@heqa2:/gxl/preview/raptrweb/$1
-}
-
-cp-prd() {
-	scp $1 root@heweb1:/gxl/prd/raptrweb/$1
-	scp $1 root@heweb2:/gxl/prd/raptrweb/$1
-	scp $1 root@xoweb3:/gxl/prd/raptrweb/$1
-	scp $1 root@xoweb4:/gxl/prd/raptrweb/$1
-}
-
-raptrbranch() {
-	svn co svn+ssh://mom.raptr.com/gxl/svn/repos/raptr/branches/raptrweb/$1
-}

@@ -3,7 +3,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 colors dante
-"colors blackboard
 "colors koehler
 
 set columns=120 " width

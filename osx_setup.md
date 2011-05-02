@@ -18,7 +18,7 @@
 	- Events / Event preset: Audio Notifications / Sound set: None
 	- Messages / Regular Chats / Text Display: / Set Font … / HUGE FONT
 * Adobe Photoshop (CS5)
-	- General / Image Interppolation: Bilinear
+	- General / Image Interpolation: Bilinear
 	- Performance / History &amp; Cache / History States: 200 (arbitrary; just a high number!)
 	- Units &amp; Rulers / Rulers: pixels
 	- Units &amp; Rulers / Type: pixels
