@@ -45,6 +45,9 @@
 	- Bookmarks / Manage Profiles … / Display Profiles / Light Background / (make it look like Dark Background)
 * iTunes
 	- Advanced / [ ] Copy files to iTunes Media folder …
+	- View / [x] as List
+	- View / View Options… / Show Columns / [x] Date Added
+	- View / View Options… / Show Columns / [ ] Rating
 * Keychain Access
 	- General / [x] Show Status in Menu Bar
 * Safari

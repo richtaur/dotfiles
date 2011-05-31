@@ -3,6 +3,7 @@
 ###############################################################################
 
 alias bashrc='/usr/bin/vim ~/.bash_profile; source $_'
+alias osx='vim ~/dev/projects/dotfiles/osx_setup.md'
 alias c='clear'
 alias gvimrc='vim ~/.gvimrc'
 alias hasinternet='ping google.com'
@@ -15,14 +16,15 @@ alias sshsh='ssh richter@209.20.66.182'
 alias todo='vim ~/dev/TODO.md'
 alias vimrc='vim ~/.vimrc'
 
-# navivation
+# Navivation
 alias '..'='cd ..'
 alias art='cd ~/dev/art'
+alias js='cd ~/dev/code/js'
 alias dev='cd ~/dev'
 alias p='cd ~/dev/projects'
 
-# git
-alias gc-m='git commit -m'
+# Git
+alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcat='~/dev/code/php/gcmftd/exec.php'
 alias gdiff='git diff'
@@ -41,15 +43,11 @@ alias yui-min='java -jar ~/dev/code/java/yuicompressor-2.4.2/build/yuicompressor
 
 # LDG
 alias devandroid='cd ~/dev/sdk/android-sdk-mac_x86/tools'
-alias devgc='cd ~/dev/game_closure'
+alias devgc='cd ~/dev/game_closure; source dev_sdk/gc_env/bin/activate'
 alias devldg='cd ~/dev/lost_decade'
 alias ldg='cd ~/Dropbox/Lost\ Decade'
 alias onslaught='cd ~/dev/lost_decade/onslaught'
-
-###############################################################################
-# Appearance
-###############################################################################
-
+alias tls='tealeaf serve'
 
 ###############################################################################
 # Global exports
@@ -66,7 +64,7 @@ export PS1="[\e[0;32m\]\u:\W\[\e[m\]]\[\e[1;32m\]>\[\e[m\] "
 #export PS1="[\u@\h \W]\\$ "
 
 # Set iTerm's tab titles
-if HOSTNAME=="173-228-6-154.dsl.dynamic.sonic.net"; then
+if BELMONT=="FUCK YEAH"; then
 	CP_HOSTNAME="Belmont"
 else
 	CP_HOSTNAME=HOSTNAME
