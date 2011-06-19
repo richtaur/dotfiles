@@ -11,7 +11,7 @@ alias hosts='sudo vim /etc/hosts'
 alias ip='ifconfig | grep 192'
 alias l='ll'
 alias ll='ls -lah'
-alias playground='cd ~/dev/playground; vim index.html; cd -'
+alias playground='cd ~/dev/playground; vim index.html'
 alias sshsh='ssh richter@209.20.66.182'
 alias todo='vim ~/dev/TODO.md'
 alias vimrc='vim ~/.vimrc'
@@ -24,11 +24,12 @@ alias dev='cd ~/dev'
 alias p='cd ~/dev/projects'
 
 # Git
+alias gb='git branch'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcat='~/dev/code/php/gcmftd/exec.php'
 alias gdiff='git diff'
-alias glog='git log --graph --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
+alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative -n 8'
 alias gpom='git push origin master'
 alias gpull='git pull origin master'
 alias gpush='git push origin master'
@@ -43,10 +44,10 @@ alias yui-min='java -jar ~/dev/code/java/yuicompressor-2.4.2/build/yuicompressor
 
 # LDG
 alias devandroid='cd ~/dev/sdk/android-sdk-mac_x86/tools'
-alias devgc='cd ~/dev/game_closure; source dev_sdk/gc_env/bin/activate'
+#alias devgc='cd ~/dev/game_closure; source dev_sdk/gc_env/bin/activate'
+alias devgc='cd ~/dev/game_closure'
 alias devldg='cd ~/dev/lost_decade'
 alias ldg='cd ~/Dropbox/Lost\ Decade'
-alias onslaught='cd ~/dev/lost_decade/onslaught'
 alias tls='tealeaf serve'
 
 ###############################################################################
@@ -55,21 +56,18 @@ alias tls='tealeaf serve'
 
 export CLICOLOR="1"
 export EDITOR="/usr/bin/vim"
-#export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include:/opt/android-sdk/tools:/opt/android-sdk/platforms/android-3/tools"
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include"
+export PATH="${HOME}/dev/game_closure/dev_sdk/gc_env/bin:${PATH}"
 
 # Set the command prompt, eg:
-# [richtaur:Lost Decade]> cd ..
-export PS1="[\e[0;32m\]\u:\W\[\e[m\]]\[\e[1;32m\]>\[\e[m\] "
-#export PS1="[\u@\h \W]\\$ "
+# [richtaur:Lost Decade](master)> cd ..
+get_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+export PS1="[\e[0;32m\]\u:\W\[\e[m\]]\[\e[1;32m\]\[\e[m\]\$(get_branch)> "
 
 # Set iTerm's tab titles
-if BELMONT=="FUCK YEAH"; then
-	CP_HOSTNAME="Belmont"
-else
-	CP_HOSTNAME=HOSTNAME
-fi
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${CP_HOSTNAME%%.*}: ${PWD/#$HOME/~}\007"'
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\007"'
 
 ###############################################################################
 # Macros

@@ -19,19 +19,20 @@
 	- Messages / Regular Chats / Text Display: / Set Font … / HUGE FONT
 * Adobe Photoshop (CS5)
 	- General / Image Interpolation: Bilinear
-	- Performance / History &amp; Cache / History States: 200 (arbitrary; just a high number!)
-	- Units &amp; Rulers / Rulers: pixels
-	- Units &amp; Rulers / Type: pixels
+	- Performance / History & Cache / History States: 200 (arbitrary; just a high number!)
+	- Units & Rulers / Rulers: pixels
+	- Units & Rulers / Type: pixels
 	- Guide, Grids & Slices / Grid
 		* Gridline Every: 32 pixels
 		* Subdivisions: 2
 	- File / New / Background Contents: Transparent
 	- View / Show / [ ] Pixel Grid
 * Chrome
+	- about:flags / Confirm to Quit / Enable
 	- Basics / Reopen last pages
 	- Home page: Use the New Tab page
 	- Personal stuff / Never save passwords …
-	- about:flags / Confirm to Quit / Enable
+	- Tools / Task Manager / [x] JavaScript memory
 * Divvy
 	- [x] Start Divvy at login
 	- [x] Use global shortcut to display panel
