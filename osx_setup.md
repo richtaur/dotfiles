@@ -28,7 +28,7 @@
 	- File / New / Background Contents: Transparent
 	- View / Show / [ ] Pixel Grid
 * Chrome
-	- about:flags / Confirm to Quit / Enable
+	- Chrome / [x] Warn Before Quitting
 	- Basics / Reopen last pages
 	- Home page: Use the New Tab page
 	- Personal stuff / Never save passwords …
