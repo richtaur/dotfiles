@@ -41,6 +41,14 @@
 	- Advanced / [x] Show all filename extensions
 	- Advanced / [ ] Show warning before changing an extension
 	- Advanced / When performing a search: Search the Current Folder
+	- Sidebar / DEVICES
+		* [ ] Belmont
+		* [ ] Hard disks
+		* [x] External disks
+		* [ ] iDisk
+		* [x] CDs, DVDs, and iPods
+	- Sidebar / SEARCH FOR
+		* (uncheck all)
 * iTerm
 	- Bookmarks / Manage Profiles … / Terminal Profiles / Default / [x] Silence terminal bell
 	- Bookmarks / Manage Profiles … / Display Profiles / Light Background / (make it look like Dark Background)

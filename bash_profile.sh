@@ -2,9 +2,9 @@
 # Aliases
 ###############################################################################
 
-alias bashrc='/usr/bin/vim ~/.bash_profile; source $_'
 alias osx='vim ~/dev/projects/dotfiles/osx_setup.md'
 alias c='clear'
+alias flushdns="dscacheutil -flushcache"
 alias gvimrc='vim ~/.gvimrc'
 alias hasinternet='ping google.com'
 alias hosts='sudo vim /etc/hosts'
@@ -12,12 +12,14 @@ alias ip='ifconfig | grep 192'
 alias l='ll'
 alias ll='ls -lah'
 alias playground='cd ~/dev/playground; vim index.html'
+alias rc='/usr/bin/vim ~/.bash_profile; source $_'
 alias sshsh='ssh richter@209.20.66.182'
 alias todo='vim ~/dev/TODO.md'
 alias vimrc='vim ~/.vimrc'
 
 # Navivation
 alias '..'='cd ..'
+alias 'cd..'='cd ..'
 alias art='cd ~/dev/art'
 alias js='cd ~/dev/code/js'
 alias dev='cd ~/dev'
@@ -27,13 +29,13 @@ alias p='cd ~/dev/projects'
 alias gb='git branch'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
-alias gcat='~/dev/code/php/gcmftd/exec.php'
+alias gcftodo='~/dev/code/php/gcmftd/exec.php'
 alias gdiff='git diff'
 alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative -n 8'
 alias gpom='git push origin master'
 alias gpull='git pull origin master'
 alias gpush='git push origin master'
-alias gstat='git status'
+alias gs='git status'
 
 # Applications
 alias telog='tail -f /var/log/apache2/error_log'
