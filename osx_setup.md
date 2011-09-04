@@ -2,12 +2,16 @@
 
 ## Commands
 
-* `cd /Library/WebServer; sudo rm -rf Documents; sudo ln -s ~/dev ./Documents`
 * `defaults write -g NSNavPanelExpandedStateForSaveMode -bool TRUE`
 * `defaults write com.apple.Safari IncludeDebugMenu YES`
 * `git config --global user.name "Matt Hackett"`
 * `git config --global user.email "richtaur@gmail.com"`
-* `vim /private/etc/apache2/httpd.conf` (uncomment `LoadModule php5_module        libexec/apache2/libphp5.so`)
+
+## Apache
+
+* `cd /Library/WebServer; sudo rm -rf Documents; sudo ln -s ~/dev ./Documents`
+* `sudo vim /private/etc/apache2/httpd.conf`
+	- uncomment the line `LoadModule php5_module        libexec/apache2/libphp5.so`
 
 ## Preferences
 
@@ -52,6 +56,7 @@
 * iTerm
 	- Bookmarks / Manage Profiles … / Terminal Profiles / Default / [x] Silence terminal bell
 	- Bookmarks / Manage Profiles … / Display Profiles / Light Background / (make it look like Dark Background)
+	- General / Windows / [ ] Use Lion-style Fullscreen windows
 * iTunes
 	- Advanced / [ ] Copy files to iTunes Media folder …
 	- View / [x] as List
