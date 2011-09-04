@@ -1,5 +1,5 @@
-# richtaur's .files
+# Matt Hackett's ~/.files
 
-You know, for kids!
+"You know, for kids!"
 
-http://richtaur.com/
+http://www.richtaur.com/
