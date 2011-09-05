@@ -56,15 +56,17 @@ alias tls='tealeaf serve'
 ###############################################################################
 
 export CLICOLOR='1'
+export COMPUTERNAME='Belmont'
 export EDITOR='/usr/bin/vim'
 export PATH='/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include'
 export PATH="${HOME}/dev/game_closure/dev_sdk/gc_env/bin:${PATH}"
 
 # Set the command prompt, eg:
-# [richtaur:Lost Decade](master)> cd ..
-export PS1="[\e[0;32m\]\u:\W\[\e[m\]]\[\e[1;32m\]\[\e[m\]\$(get_branch)> "
+# [richtaur@Belmont:Lost Decade](master)> cd ..
+export PS1="[\e[0;32m\]\u@${COMPUTERNAME}:\W\[\e[m\]]\[\e[1;32m\]\[\e[m\]\$(get_branch)> "
 
 # Set iTerm's tab titles
+#export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${COMPUTERNAME}: ${PWD/#$HOME/~}\007"'
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\007"'
 
 ###############################################################################

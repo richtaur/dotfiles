@@ -4,6 +4,7 @@
 
 * `defaults write -g NSNavPanelExpandedStateForSaveMode -bool TRUE`
 * `defaults write com.apple.Safari IncludeDebugMenu YES`
+* `defaults write org.vim.MacVim MMNativeFullScreen 0`
 * `git config --global user.name "Matt Hackett"`
 * `git config --global user.email "richtaur@gmail.com"`
 
