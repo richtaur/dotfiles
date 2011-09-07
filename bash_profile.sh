@@ -2,7 +2,6 @@
 # Aliases
 ###############################################################################
 
-alias osx='vim ~/dev/projects/dotfiles/osx_setup.md'
 alias c='clear'
 alias flushdns='dscacheutil -flushcache'
 alias gvimrc='vim ~/.gvimrc'
@@ -11,17 +10,14 @@ alias hosts='sudo vim /etc/hosts'
 alias ip='ifconfig | grep 192'
 alias l='ls -lah'
 alias lakitu='ssh richtaur@74.207.252.123'
-alias playground='cd ~/dev/playground; vim index.html'
+alias osx='vim ~/dev/projects/dotfiles/osx_setup.md'
 alias rc='/usr/bin/vim ~/.bash_profile; source $_'
-alias sshsh='ssh richter@209.20.66.182'
 alias vimrc='vim ~/.vimrc'
 
 # Navivation
 alias '..'='cd ..'
 alias 'cd-'='cd -'
 alias 'cd..'='cd ..'
-alias art='cd ~/dev/art'
-alias js='cd ~/dev/code/js'
 alias dev='cd ~/dev'
 alias p='cd ~/dev/projects'
 
@@ -29,23 +25,17 @@ alias p='cd ~/dev/projects'
 get_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-alias gb='git branch'
 alias gcm='git commit -m'
-alias gcam='git commit -a -m'
 alias gdiff='git diff'
 alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative -n 8'
-alias gpull="git pull origin $get_branch"
-alias gpush="git push origin $get_branch"
 alias gs='git status'
 
 # Applications
 alias telog='tail -f /var/log/apache2/error_log'
 alias top='top -o cpu'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-alias yui-min='java -jar ~/dev/code/java/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar'
 
 # LDG
-alias devandroid='cd ~/dev/sdk/android-sdk-mac_x86/tools'
 alias devgc='cd ~/dev/game_closure'
 alias devldg='cd ~/dev/lost_decade'
 alias ldg='cd ~/Dropbox/Lost\ Decade'
@@ -66,8 +56,7 @@ export PATH="${HOME}/dev/game_closure/dev_sdk/gc_env/bin:${PATH}"
 export PS1="[\e[0;32m\]\u@${COMPUTERNAME}:\W\[\e[m\]]\[\e[1;32m\]\[\e[m\]\$(get_branch)> "
 
 # Set iTerm's tab titles
-#export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${COMPUTERNAME}: ${PWD/#$HOME/~}\007"'
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}: ${PWD/#$HOME/~}\007"'
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${COMPUTERNAME}: ${PWD/#$HOME/~}\007"'
 
 ###############################################################################
 # Macros
@@ -77,14 +66,14 @@ cpfilename() {
 	ls $1 | pbcopy
 }
 
+lad() {
+	ls -lah $1 | grep ^d
+}
+
 lameit() {
 	lame -V 4 $1.wav
 	mv $1.wav.mp3 $1.mp3
 	rm $1.wav
-}
-
-lld() {
-	ls -lah $1 | grep ^d
 }
 
 ogg() {
@@ -108,9 +97,3 @@ untargz() {
 	gzip -d $1
 	tar -xvf $1
 }
-
-###############################################################################
-# Notes
-###############################################################################
-
-# svn co svn+ssh://mom.raptr.com/gxl/svn/repos/raptr/branches/phoenix/alpha_6
