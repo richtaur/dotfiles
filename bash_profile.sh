@@ -2,6 +2,7 @@
 # Aliases
 ###############################################################################
 
+alias '.l'='..; l'
 alias c='clear'
 alias flushdns='dscacheutil -flushcache'
 alias gvimrc='vim ~/.gvimrc'
@@ -33,6 +34,7 @@ alias gs='git status'
 # Applications
 alias telog='tail -f /var/log/apache2/error_log'
 alias top='top -o cpu'
+alias vim='mvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 
 # LDG

@@ -24,7 +24,7 @@
 	- Messages / Regular Chats / Text Display: / Set Font … / HUGE FONT
 * Adobe Photoshop (CS5)
 	- General / Image Interpolation: Bilinear
-	- Performance / History & Cache / History States: 200 (arbitrary; just a high number!)
+	- Performance / History & Cache / History States: 500 (arbitrary; just a high number!)
 	- Units & Rulers / Rulers: pixels
 	- Units & Rulers / Type: pixels
 	- Guide, Grids & Slices / Grid
@@ -32,6 +32,7 @@
 		* Subdivisions: 2
 	- File / New / Background Contents: Transparent
 	- View / Show / [ ] Pixel Grid
+	- Window / History / (Menu in upper right) / History Options… / [x] Make Layer Visibility Changes Undoable
 * Chrome
 	- Chrome / [x] Warn Before Quitting
 	- Basics / Reopen last pages
