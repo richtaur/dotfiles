@@ -90,12 +90,40 @@ png() {
 }
 
 tmp() {
-	scp -r $1 richter@richtaur.com:/home/www/richtaur.com/htdocs/misc/tmp/
-	echo http://richtaur.com/misc/tmp/$1 | pbcopy
-	echo http://richtaur.com/misc/tmp/$1
+	scp -r $1 richtaur@74.207.252.123:/home/richtaur/dev/projects/richtaur.com/misc/tmp/
+	echo http://www.richtaur.com/misc/tmp/$1 | pbcopy
+	echo "Done! Uploaded to http://www.richtaur.com/misc/tmp/$1 (it's in your copy buffer)."
 }
 
 untargz() {
 	gzip -d $1
 	tar -xvf $1
+}
+
+# Update dev_sdk ##############################################################
+
+updatedev_sdk() {
+	# Get latest ui-develop and update submodules
+	git pull origin ui-develop
+	git submodule update --init
+
+	# Switch timestep to redraw branch and update
+	cd lib/timestep
+	git checkout redraw
+	git pull origin redraw
+	cd ../..
+
+	# Install it!
+	./dev_install.sh
+}
+
+threepop() {
+	tealeaf deploy -o out.zip 0.0.1 --no-compress
+	rm -rf ../tmp/*
+	mv out.zip ../tmp/
+	cd ../tmp
+	unzip out.zip
+	cd ../
+	chmod -R 777 tmp
+	cd threepop
 }
