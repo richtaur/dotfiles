@@ -1,4 +1,11 @@
 ###############################################################################
+# Sources
+###############################################################################
+
+#source /usr/local/etc/bash_completion.d/git-completion.bash
+# :(
+
+###############################################################################
 # Aliases
 ###############################################################################
 
@@ -27,7 +34,7 @@ get_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 alias gcm='git commit -m'
-alias gdiff='git diff'
+alias gd='git diff'
 alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative -n 8'
 alias gs='git status'
 
