@@ -1,10 +1,14 @@
 #!/bin/bash
 
 CURRENT_DIRECTORY=`pwd`
+
+cp bash_profile.sh bash_profile.tmp
+`cat bash_profile_lakitu.sh` >> bash_profile.tmp
+
 cd ~/
 
 rm .bash_profile
-ln -s $CURRENT_DIRECTORY/bash_profile.sh .bash_profile
+ln -s $CURRENT_DIRECTORY/bash_profile.tmp .bash_profile
 
 rm .gitconfig
 ln -s $CURRENT_DIRECTORY/git.config .gitconfig

@@ -11,13 +11,9 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 alias '.l'='..; l'
 alias c='clear'
 alias flushdns='dscacheutil -flushcache'
-alias gvimrc='vim ~/.gvimrc'
 alias hasinternet='ping google.com'
 alias hosts='sudo vim /etc/hosts'
-alias ip='ifconfig | grep 173'
 alias l='ls -lah'
-alias lakitu='ssh richtaur@74.207.252.123'
-alias osrc='vim ~/dev/projects/dotfiles/osx_setup.md'
 alias rc='/usr/bin/vim ~/.bash_profile; source $_'
 alias vimrc='vim ~/.vimrc'
 
@@ -45,29 +41,19 @@ alias gs='git status'
 # Applications
 alias telog='tail -f /var/log/apache2/error_log'
 alias top='top -o cpu'
-alias vim='mvim'
-alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 
 ##############################################################################
 # Global exports
 ###############################################################################
 
 export CLICOLOR='1'
-export COMPUTERNAME='Belmont'
 export EDITOR='/usr/bin/vim'
 export PATH='/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include'
-export PATH="${HOME}/dev/game_closure/dev_sdk/gc_env/bin:${PATH}"
 export PATH="${HOME}/dev/lost_decade/djinn/tools/bin:${PATH}"
 
 # Set the command prompt, eg:
 # [richtaur@Belmont:Lost Decade](master)> cd ..
 export PS1="[\e[0;32m\]\u@${COMPUTERNAME}:\W\[\e[m\]]\[\e[1;32m\]\[\e[m\]\$(get_branch)> "
-
-# Set iTerm's tab titles
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${COMPUTERNAME}: ${PWD/#$HOME/~}\007"'
-
-# Game Closure
-export GCANDROID='/Users/richtaur/dev/game_closure/android'
 
 ###############################################################################
 # Macros
@@ -87,10 +73,6 @@ lameit() {
 	rm $1.wav
 }
 
-ogg() {
-	vlc -I dummy $1 --sout="#transcode{scale=1,acodec=vorbis,ab=192,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=$2}" vlc://quit
-}
-
 png() {
 	ls -lh $1
 	pngcrush -q $1 tmp.png
@@ -98,30 +80,7 @@ png() {
 	ls -lh $1
 }
 
-tmp() {
-	scp -r $1 richtaur@74.207.252.123:/home/richtaur/dev/projects/richtaur.com/misc/tmp/
-	echo http://www.richtaur.com/misc/tmp/$1 | pbcopy
-	echo "Done! Uploaded to http://www.richtaur.com/misc/tmp/$1 (it's in your copy buffer)."
-}
-
 untargz() {
 	gzip -d $1
 	tar -xvf $1
-}
-
-# Update dev_sdk ##############################################################
-
-updatedev_sdk() {
-	# Get latest ui-develop and update submodules
-	git pull origin ui-develop
-	git submodule update --init
-
-	# Switch timestep to redraw branch and update
-	cd lib/timestep
-	git checkout redraw
-	git pull origin redraw
-	cd ../..
-
-	# Install it!
-	./dev_install.sh
 }
