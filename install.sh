@@ -6,6 +6,9 @@ cd ~/
 rm .bash_profile
 ln -s $CURRENT_DIRECTORY/bash_profile.sh .bash_profile
 
+rm .gitconfig
+ln -s $CURRENT_DIRECTORY/git.config .gitconfig
+
 rm .gvimrc
 ln -s $CURRENT_DIRECTORY/gvim.rc .gvimrc
 

@@ -24,6 +24,9 @@
 	- Messages / Regular Chats / Text Display: / Set Font … / HUGE FONT
 * Adobe Photoshop (CS5)
 	- General / Image Interpolation: Bilinear
+	- General / [ ] Enable Flick Panning
+	- Interface / [ ] Open Documents as Tabs
+	- Interface / [ ] Enable Floating Document Window Docking (WTF DOES THAT MEEEAN)
 	- Performance / History & Cache / History States: 500 (arbitrary; just a high number!)
 	- Units & Rulers / Rulers: pixels
 	- Units & Rulers / Type: pixels

@@ -2,8 +2,7 @@
 # Sources
 ###############################################################################
 
-#source /usr/local/etc/bash_completion.d/git-completion.bash
-# :(
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 ###############################################################################
 # Aliases
@@ -15,18 +14,20 @@ alias flushdns='dscacheutil -flushcache'
 alias gvimrc='vim ~/.gvimrc'
 alias hasinternet='ping google.com'
 alias hosts='sudo vim /etc/hosts'
-alias ip='ifconfig | grep 192'
+alias ip='ifconfig | grep 173'
 alias l='ls -lah'
 alias lakitu='ssh richtaur@74.207.252.123'
-alias osx='vim ~/dev/projects/dotfiles/osx_setup.md'
+alias osrc='vim ~/dev/projects/dotfiles/osx_setup.md'
 alias rc='/usr/bin/vim ~/.bash_profile; source $_'
 alias vimrc='vim ~/.vimrc'
 
-# Navivation
+# Navigation
 alias '..'='cd ..'
 alias 'cd-'='cd -'
 alias 'cd..'='cd ..'
 alias dev='cd ~/dev'
+alias devldg='cd ~/dev/lost_decade'
+alias ldg='cd ~/Dropbox/Lost\ Decade'
 alias p='cd ~/dev/projects'
 
 # Git
@@ -35,7 +36,10 @@ get_branch() {
 }
 alias gcm='git commit -m'
 alias gd='git diff'
+alias gitsubup='git submodule update --init'
 alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative -n 8'
+alias gpullm='git pull origin master'
+alias gpushm='git push origin master'
 alias gs='git status'
 
 # Applications
@@ -44,13 +48,7 @@ alias top='top -o cpu'
 alias vim='mvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 
-# LDG
-alias devgc='cd ~/dev/game_closure'
-alias devldg='cd ~/dev/lost_decade'
-alias ldg='cd ~/Dropbox/Lost\ Decade'
-alias tls='tealeaf serve'
-
-###############################################################################
+##############################################################################
 # Global exports
 ###############################################################################
 
@@ -59,6 +57,7 @@ export COMPUTERNAME='Belmont'
 export EDITOR='/usr/bin/vim'
 export PATH='/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include'
 export PATH="${HOME}/dev/game_closure/dev_sdk/gc_env/bin:${PATH}"
+export PATH="${HOME}/dev/lost_decade/djinn/tools/bin:${PATH}"
 
 # Set the command prompt, eg:
 # [richtaur@Belmont:Lost Decade](master)> cd ..
@@ -66,6 +65,9 @@ export PS1="[\e[0;32m\]\u@${COMPUTERNAME}:\W\[\e[m\]]\[\e[1;32m\]\[\e[m\]\$(get_
 
 # Set iTerm's tab titles
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${COMPUTERNAME}: ${PWD/#$HOME/~}\007"'
+
+# Game Closure
+export GCANDROID='/Users/richtaur/dev/game_closure/android'
 
 ###############################################################################
 # Macros
@@ -122,15 +124,4 @@ updatedev_sdk() {
 
 	# Install it!
 	./dev_install.sh
-}
-
-threepop() {
-	tealeaf deploy -o out.zip 0.0.1 --no-compress
-	rm -rf ../tmp/*
-	mv out.zip ../tmp/
-	cd ../tmp
-	unzip out.zip
-	cd ../
-	chmod -R 777 tmp
-	cd threepop
 }
