@@ -2,14 +2,15 @@
 " Hacks, etc.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set nocompatible " SET THIS FIRST! use new hotness that's not compatible with Vi
+set nocompatible " SET THIS FIRST! Use new hotness that's not compatible with Vi
 
-" Oh SNAP ; instead of :
+" Shortcut to allow ; instead of :
 nnoremap ; :
 
-" Turn on syntax highlighting
+" Turn on syntax highlighting, keep it on
 :syntax on
 syntax sync fromstart
+autocmd BufReadPost * syntax sync fromstart
 
 " Allows multiple lines to be pasted correctly
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
@@ -21,12 +22,12 @@ vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
 " Tabs
 set autoindent
 set copyindent " Copy the previous line's indentation when auto-indenting
-set shiftwidth=2
+set shiftwidth=2 " Number of spaces to use for indenting via << >>
 set smarttab " Tell auto-indent to use shiftwidth instead of tabstop
-set softtabstop=2
-set tabstop=2
+set softtabstop=2 " Number of spaces to use when inserting/deleting spaces instead of a tab
+set tabstop=2 " Number of spaces representing a tab
 
-" Don't bother saving backups, they're pointless (backups live in svn or git)
+" Don't bother saving backups, they're pointless (backups live in git)
 set nobackup
 set noswapfile
 
@@ -42,17 +43,21 @@ set incsearch " show search matches as you type
 set list
 "set listchars=tab:..,trail:⌫,extends:…,nbsp:_
 set listchars=extends:…,tab:\ \ ,trail:⌫
-" Some other cool stuff to use: ᅴ ᗛ ← ↔ ↝ ↠ ↤ ↩ ↲ ↺ ↻ ⇐ ⇠ ⇤ ⇥ ⇰ ∞ ⌦ ⌫ ⌧ ⏎ ☢ ☥ ☯ ☹ ☺ 
-set noerrorbells " don't beep at me, ever
+" Some other cool stuff to use: ᅴ ᗛ ← ↔ ↝ ↠ ↤ ↩ ↲ ↺ ↻ ⇐ ⇠ ⇤ ⇥ ⇰ ∞ ⌦ ⌫ ⌧ ⏎ ☢ ☥ ☯ ☹ ☺
+set noerrorbells " Don't beep at me, ever
+set noexpandtab
 set nowrap
-set number " show line numbers
+set number " Show line numbers
 set ruler
 set showcmd
-set showmatch " show matching parenthesis
+set showmatch " Show matching parenthesis
 set title " change the window's title to the current filename
-set undolevels=5000 " 5000 levels of undo
-set vb " verbose error messaging just in case
+set undolevels=9001
+set vb " Verbose error messaging just in case
 set visualbell
+
+" No wrapping, even when a new file is opened!
+autocmd BufReadPost * set nowrap
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language-specific stuff
@@ -63,13 +68,13 @@ let php_sql_query=1
 
 " Markdown
 augroup md
+	" Note: turns wrapping back on!
 	autocmd BufRead *.md set ai formatoptions=tcroqn2 comments=n:&gt; wrap
 augroup END
 
-" Some languages work best with spaces for indentation (Python, YAML)
-set noet " Use spaces for tabs - wait what ???
-au BufRead,BufNewFile *.py set filetype=python ts=2 sw=2 sts=2 et
-au BufRead,BufNewFile *.yaml set filetype=yaml ts=2 sw=2 sts=2 et
+" Some languages work best with spaces for indentation (Python, YAML…)
+autocmd BufRead,BufNewFile *.py set filetype=python ts=2 sw=2 sts=2 expandtab
+autocmd BufRead,BufNewFile *.yaml set filetype=yaml ts=2 sw=2 sts=2 expandtab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY MAPPINGS
@@ -169,6 +174,7 @@ abbreviate coudl could
 abbreviate cpoy copy
 abbreviate cxan can
 abbreviate danceing dancing
+abbreviate dtae date
 abbreviate debice device
 abbreviate definately definitely
 abbreviate develope develop
