@@ -1,3 +1,30 @@
+export COMPUTERNAME='Belmont'
+
+# Set iTerm's tab titles
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${COMPUTERNAME}: ${PWD/#$HOME/~}\007"'
+
+alias gvimrc='vim ~/.gvimrc'
+alias ip='ifconfig | grep inet'
+alias lakitu='ssh richtaur@74.207.252.123'
+alias sshldg='ssh git@dev.lostdecadegames.com'
+alias osrc='vim ~/dev/projects/dotfiles/belmont/osx_setup.md'
+alias vim='mvim'
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+
+ogg() {
+	vlc -I dummy $1 --sout="#transcode{scale=1,acodec=vorbis,ab=192,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=$2}" vlc://quit
+}
+
+lostcast() {
+	scp $1 lostdecadegames@media.lostdecadegames.com:/home/lostdecadegames/media.lostdecadegames.com/lostcast/
+}
+
+tmp() {
+	scp -r $1 richtaur@74.207.252.123:/home/richtaur/dev/projects/richtaur.com/misc/tmp/
+	echo http://www.richtaur.com/misc/tmp/$1 | pbcopy
+	echo "Done! Uploaded to http://www.richtaur.com/misc/tmp/$1 (it's in your copy buffer)."
+}
+
 ###############################################################################
 # Sources
 ###############################################################################
@@ -10,10 +37,12 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 
 alias '.l'='..; l'
 alias c='clear'
+alias ds='djinn serve'
 alias flushdns='dscacheutil -flushcache'
 alias hasinternet='ping google.com'
 alias hosts='sudo vim /etc/hosts'
 alias l='ls -lah'
+alias ll='ls -lah'
 alias rc='/usr/bin/vim ~/.bash_profile; source $_'
 alias vimrc='vim ~/.vimrc'
 
@@ -24,6 +53,7 @@ alias 'cd..'='cd ..'
 alias dev='cd ~/dev'
 alias devldg='cd ~/dev/lost_decade'
 alias ldg='cd ~/Dropbox/Lost\ Decade'
+alias manor='cd ~/dev/lost_decade/manor; jekyll'
 alias p='cd ~/dev/projects'
 
 # Git
@@ -31,11 +61,12 @@ get_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 alias gcm='git commit -m'
-alias gd='git diff'
+alias gd='git difftool'
 alias gitsubup='git submodule update --init'
 alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative -n 8'
 alias gpullm='git pull origin master'
 alias gpushm='git push origin master'
+alias grem='git remote -v'
 alias gs='git status'
 
 # Applications
