@@ -15,6 +15,10 @@ ogg() {
 	vlc -I dummy $1 --sout="#transcode{scale=1,acodec=vorbis,ab=192,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=$2}" vlc://quit
 }
 
+ogg96() {
+	vlc -I dummy $1 --sout="#transcode{scale=1,acodec=vorbis,ab=96,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=$2}" vlc://quit
+}
+
 lostcast() {
 	scp $1 lostdecadegames@media.lostdecadegames.com:/home/lostdecadegames/media.lostdecadegames.com/lostcast/
 }
@@ -35,6 +39,7 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 # Aliases
 ###############################################################################
 
+# Misc
 alias '.l'='..; l'
 alias c='clear'
 alias ds='djinn serve'
@@ -45,11 +50,13 @@ alias l='ls -lah'
 alias ll='ls -lah'
 alias rc='/usr/bin/vim ~/.bash_profile; source $_'
 alias vimrc='vim ~/.vimrc'
+#find ./ -name "*.png" -exec mogrify -scale 50% {} \;
 
 # Navigation
 alias '..'='cd ..'
 alias 'cd-'='cd -'
 alias 'cd..'='cd ..'
+alias art='cd ~/art'
 alias dev='cd ~/dev'
 alias devldg='cd ~/dev/lost_decade'
 alias ldg='cd ~/Dropbox/Lost\ Decade'
@@ -57,13 +64,17 @@ alias manor='cd ~/dev/lost_decade/manor; jekyll'
 alias p='cd ~/dev/projects'
 
 # Git
+git config --global user.name "Matt Hackett"
+git config --global user.email richtaur@gmail.com
 get_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+alias gba='git branch -a'
 alias gcm='git commit -m'
+alias gcam='git commit -am'
 alias gd='git difftool'
 alias gitsubup='git submodule update --init'
-alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative -n 8'
+alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative -n 100'
 alias gpullm='git pull origin master'
 alias gpushm='git push origin master'
 alias grem='git remote -v'
