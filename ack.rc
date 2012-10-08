@@ -1,1 +1,2 @@
 --type-add=css=.less
+--type-add=js=.json
