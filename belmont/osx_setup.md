@@ -23,6 +23,7 @@
 	- Events / Event preset: Audio Notifications / Sound set: None
 	- Messages / Regular Chats / Text Display: / Set Font … / HUGE FONT
 * Adobe Photoshop (CS5)
+	- General / [ ] Export Clipboard
 	- General / Image Interpolation: Bilinear
 	- General / [ ] Enable Flick Panning
 	- Interface / [ ] Open Documents as Tabs
