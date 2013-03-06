@@ -11,6 +11,7 @@ nnoremap ; :
 :syntax on
 syntax sync fromstart
 autocmd BufReadPost * syntax sync fromstart
+highlight clear SignColumn
 
 " Allows multiple lines to be pasted correctly
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
@@ -55,6 +56,7 @@ set title " change the window's title to the current filename
 set undolevels=9001
 set vb " Verbose error messaging just in case
 set visualbell
+set wrapscan
 
 " No wrapping, even when a new file is opened!
 autocmd BufReadPost * set nowrap
@@ -94,9 +96,6 @@ map <D-9> 9gt
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fix common typos
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-abbreviate GLBOALS GLOBALS
-abbreviate GLBOASL GLOBALS
-abbreviate GLoBALS GLOBALS
 abbreviate accesories accessories
 abbreviate accomodate accommodate
 abbreviate acheive achieve
@@ -174,7 +173,6 @@ abbreviate coudl could
 abbreviate cpoy copy
 abbreviate cxan can
 abbreviate danceing dancing
-abbreviate dtae date
 abbreviate debice device
 abbreviate definately definitely
 abbreviate develope develop
@@ -189,6 +187,7 @@ abbreviate doller dollars
 abbreviate donig doing
 abbreviate driveing driving
 abbreviate drnik drink
+abbreviate dtae date
 abbreviate ehco echo
 abbreviate ehr her
 abbreviate embarass embarrass
@@ -212,8 +211,9 @@ abbreviate freind friend
 abbreviate friday Friday
 abbreviate frmo from
 abbreviate fro for
-abbreviate functino function
+abbreviate fucntino function
 abbreviate fucntion function
+abbreviate functino function
 abbreviate fwe few
 abbreviate gerat great
 abbreviate geting getting
@@ -329,8 +329,8 @@ abbreviate religous religious
 abbreviate reutnr return
 abbreviate rwite write
 abbreviate rythm rhythm
-abbreviate saturday Saturday
 abbreviate sacle scale
+abbreviate saturday Saturday
 abbreviate selectoin selection
 abbreviate sentance sentence
 abbreviate seperate separate
@@ -343,9 +343,9 @@ abbreviate smae same
 abbreviate smoe some
 abbreviate soem some
 abbreviate sohw show
-abbreviate sould should
 abbreviate soudn sound
 abbreviate soudns sounds
+abbreviate sould should
 abbreviate statment statement
 abbreviate stnad stand
 abbreviate stopry story
@@ -376,10 +376,12 @@ abbreviate thna than
 abbreviate thne then
 abbreviate thnig thing
 abbreviate thnigs things
+abbreviate thnik think
 abbreviate thsi this
 abbreviate thsoe those
 abbreviate thta that
 abbreviate thursday Thursday
+abbreviate tihnk think
 abbreviate tihs this
 abbreviate timne time
 abbreviate tje the

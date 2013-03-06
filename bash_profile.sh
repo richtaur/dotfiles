@@ -10,17 +10,16 @@ alias sshldg='ssh git@dev.lostdecadegames.com'
 alias osrc='vim ~/dev/projects/dotfiles/belmont/osx_setup.md'
 alias vim='mvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+alias desktopcleanup='rm ~/Desktop/Screen*\(*.png'
 
+# usage: ogg example.mp3 example.ogg
 ogg() {
 	vlc -I dummy $1 --sout="#transcode{scale=1,acodec=vorbis,ab=192,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=$2}" vlc://quit
 }
 
+# usage: ogg96 example.mp3 example.ogg
 ogg96() {
 	vlc -I dummy $1 --sout="#transcode{scale=1,acodec=vorbis,ab=96,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=$2}" vlc://quit
-}
-
-lostcast() {
-	scp $1 lostdecadegames@media.lostdecadegames.com:/home/lostdecadegames/media.lostdecadegames.com/lostcast/
 }
 
 tmp() {
@@ -50,7 +49,6 @@ alias l='ls -lah'
 alias ll='ls -lah'
 alias rc='/usr/bin/vim ~/.bash_profile; source $_'
 alias vimrc='vim ~/.vimrc'
-#find ./ -name "*.png" -exec mogrify -scale 50% {} \;
 
 # Navigation
 alias '..'='cd ..'
@@ -60,15 +58,18 @@ alias art='cd ~/art'
 alias dev='cd ~/dev'
 alias devldg='cd ~/dev/lost_decade'
 alias ldg='cd ~/Dropbox/Lost\ Decade'
+alias lostcast='cd ~/audio/Logic/Lostcast'
 alias manor='cd ~/dev/lost_decade/manor; jekyll'
 alias p='cd ~/dev/projects'
 
 # Git
 git config --global user.name "Matt Hackett"
 git config --global user.email richtaur@gmail.com
+git config --global core.excludesfile ~/.gitignore_global
 get_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+alias gfa='git fetch -a'
 alias gba='git branch -a'
 alias gcm='git commit -m'
 alias gcam='git commit -am'
@@ -90,8 +91,20 @@ alias top='top -o cpu'
 
 export CLICOLOR='1'
 export EDITOR='/usr/bin/vim'
-export PATH='/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/include:/opt/local/apache2/include:/usr/local/include'
-export PATH="${HOME}/dev/lost_decade/djinn/tools/bin:${PATH}"
+export PATH=''
+export PATH="${PATH}:/opt/local/bin"
+export PATH="${PATH}:/opt/local/sbin"
+export PATH="${PATH}:/usr/local/bin"
+export PATH="${PATH}:/usr/bin"
+export PATH="${PATH}:/bin"
+export PATH="${PATH}:/usr/sbin"
+export PATH="${PATH}:/sbin"
+export PATH="${PATH}:/usr/X11/bin"
+export PATH="${PATH}:/opt/local/include"
+export PATH="${PATH}:/opt/local/apache2/include"
+export PATH="${PATH}:/usr/local/include"
+export PATH="${PATH}:/usr/local/share/npm/bin"
+export PATH="${PATH}:${HOME}/dev/lost_decade/djinn/tools/bin"
 
 # Set the command prompt, eg:
 # [richtaur@Belmont:Lost Decade](master)> cd ..
@@ -120,6 +133,14 @@ png() {
 	pngcrush -q $1 tmp.png
 	mv tmp.png $1
 	ls -lh $1
+}
+
+croppngs() {
+	find ./ -name "*.png" -exec mogrify -crop $1 {} \;
+}
+
+resizepngs() {
+	find ./ -name "*.png" -exec mogrify -scale $1 {} \;
 }
 
 untargz() {

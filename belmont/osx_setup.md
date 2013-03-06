@@ -2,6 +2,7 @@
 
 ## Commands
 
+* `chflags nohidden ~/Library/`
 * `defaults write -g NSNavPanelExpandedStateForSaveMode -bool TRUE`
 * `defaults write com.apple.Safari IncludeDebugMenu YES`
 * `defaults write org.vim.MacVim MMNativeFullScreen 0`
@@ -68,6 +69,8 @@
 	- View / [x] as List
 	- View / View Options… / Show Columns / [x] Date Added
 	- View / View Options… / Show Columns / [ ] Rating
+	- General / When you insert a CD: / Import Settings…
+		* Import Using: / AAC Encoder
 * Keychain Access
 	- General / [x] Show Status in Menu Bar
 * Safari
