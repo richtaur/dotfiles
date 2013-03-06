@@ -11,7 +11,6 @@ nnoremap ; :
 :syntax on
 syntax sync fromstart
 autocmd BufReadPost * syntax sync fromstart
-highlight clear SignColumn
 
 " Allows multiple lines to be pasted correctly
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>

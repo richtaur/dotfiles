@@ -7,6 +7,7 @@
 " Colorscheme Option:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi clear
+hi clear SignColumn
 if exists("syntax on")
 	syntax reset
 endif
