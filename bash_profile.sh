@@ -135,6 +135,7 @@ png() {
 	ls -lh $1
 }
 
+# Usage: croppngs WIDTHxHEIGHT+X+Y filename
 croppngs() {
 	find ./ -name "*.png" -exec mogrify -crop $1 {} \;
 }
