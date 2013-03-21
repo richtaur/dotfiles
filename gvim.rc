@@ -2,8 +2,9 @@
 " Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colors dante
-"colors koehler
+" First set the colorscheme, so its settings can be easily overwritten
+colorscheme desert256
+"colors dante
 
 set columns=120 " width
 set lines=52 " height
@@ -11,13 +12,12 @@ set lines=52 " height
 set guifont=Monaco:h20
 "set guifont=CentSchBook\ Mono:h16.00
 
-" No idea WTF these are doing
-set guioptions-=T
-set guioptions+=b
-iab YDATE <C-R>=strftime("%a %b %d %T %Y")<CR>
-let g:explVertical=1
+" Highlight line 80
+set colorcolumn=80
+highlight ColorColumn guibg=grey8
+highlight CursorLine guibg=grey8
 
-" I hate code-folding in Vim, it's rubbish :(
+" Disable code-folding
 set fdm=marker
 set foldclose=all
 set nofoldenable
@@ -25,16 +25,11 @@ set nofoldenable
 " Show file types in menu
 let do_syntax_sel_menu = 1|runtime~! synmenu.vim|aunmenu &Syntax.&Show\ filetypes\ in\ menu
 
-" Some magic stuff from Dav, dunno
-function! GetFunctions()
-	let g:explWinSize=25
-	"execute ":set columns=300"
-	"execute "silent vertical sp"
-    "execute "silent vertical resize 300"
-	execute "!~/.bin/parsefunctions.php %"
-	execute ":vert sp /tmp/vimTmp"
-	execute ":1"
-endfunction
+" TODO: No idea WTF these are doing…
+set guioptions-=T
+set guioptions+=b
+iab YDATE <C-R>=strftime("%a %b %d %T %Y")<CR>
+let g:explVertical=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Archive
