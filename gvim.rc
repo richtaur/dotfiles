@@ -3,8 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " First set the colorscheme, so its settings can be easily overwritten
-colorscheme desert256
-"colors dante
+colorscheme desert256 "dante
 
 set columns=120 " width
 set lines=52 " height
@@ -14,8 +13,11 @@ set guifont=Monaco:h20
 
 " Highlight line 80
 set colorcolumn=80
-highlight ColorColumn guibg=grey8
-highlight CursorLine guibg=grey8
+highlight ColorColumn guibg=grey5
+
+" Highlight cursor line
+set cursorline
+highlight CursorLine guibg=grey5
 
 " Disable code-folding
 set fdm=marker
