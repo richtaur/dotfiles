@@ -4,7 +4,7 @@ export COMPUTERNAME='Belmont'
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${COMPUTERNAME}: ${PWD/#$HOME/~}\007"'
 
 alias gvimrc='vim ~/.gvimrc'
-alias ip='ifconfig | grep 173'
+alias ip='ifconfig | grep 192.168'
 alias lakitu='ssh richtaur@74.207.252.123'
 alias osrc='vim ~/dev/projects/dotfiles/belmont/osx_setup.md'
 alias vim='mvim'

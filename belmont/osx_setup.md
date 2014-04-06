@@ -1,4 +1,6 @@
-# OSX Setup
+# OS X Setup
+
+This is a constantly out-of-sync, sometimes useless text description of some miscellaneous configuration/settings for my MacBook.
 
 ## Commands
 
@@ -18,12 +20,6 @@
 
 ## Preferences
 
-* Adium
-	- Appearance / Emoticons: None
-	- Appearance / Automatic Sizing: / [x] Size to fit vertically
-	- Advanced / Contact List / Tooltips / [ ] Show contact information tooltips
-	- Events / Event preset: Audio Notifications / Sound set: None
-	- Messages / Regular Chats / Text Display: / Set Font … / HUGE FONT
 * Adobe Photoshop (CS5)
 	- General / [ ] Export Clipboard
 	- General / Image Interpolation: Bilinear
@@ -43,7 +39,6 @@
 	- Chrome / [x] Warn Before Quitting
 	- Basics / Reopen last pages
 	- Home page: Use the New Tab page
-	- Personal stuff / Never save passwords …
 	- Tools / Task Manager / [x] JavaScript memory
 * Divvy
 	- [x] Start Divvy at login
@@ -65,23 +60,6 @@
 	- Profiles / Open Profiles… / Edit Profiles… / Default / Colors / Light Background / (make it look like Dark Background)
 	- Preferences / Appearance / Display / [ ] Dim inactive split panes
 
-(these rae probably deprecated)
-	- General / Windows / [ ] Use Lion-style Fullscreen windows
-* iTunes
-	- Advanced / [ ] Copy files to iTunes Media folder …
-	- View / View Options… / Show Columns / [x] Date Added
-	- View / View Options… / Show Columns / [ ] Rating
-	- General / When you insert a CD: / Import Settings…
-		* Import Using: / AAC Encoder
-* Logic
-	- Preferences / General / Editing / Right Mouse Button: / Is Assignable to a Tool
-* Marked
-	- Behavior / [x] Convert fenced code blocks
-* Safari
-	- Advanced / [x] Show Develop menu in menu bar
-* Songbird
-	- Manage Files / [ ] Allow Songbird to manage files
-
 ## System Preferenes
 
 * Personal
@@ -101,7 +79,7 @@
 		* [x] Tap to Click
 		* Screen Zoom / Options … / [ ] Smooth images …
 * Internet & Wireless
-	- Sharing / Computer Name: $AWESOME
+	- Sharing / Computer Name: $NAME
 	- Sharing / [x] Web Sharing
 * System
 	- Accounts / My Account / Login Items

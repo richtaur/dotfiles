@@ -3,14 +3,16 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible " SET THIS FIRST! Use new hotness that's not compatible with Vi
+"set hidden " Instead of closing buffers, hide them
 
 " Shortcut to allow ; instead of :
 nnoremap ; :
 
 " Turn on syntax highlighting, keep it on
-:syntax on
+syntax on
 syntax sync fromstart
 autocmd BufReadPost * syntax sync fromstart
+filetype plugin indent on
 
 " Allows multiple lines to be pasted correctly
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
@@ -35,23 +37,25 @@ set noswapfile
 command W w
 
 " Everything else
-set backspace=indent,eol,start " allow backspacing over everything useful
+set backspace=indent,eol,start " Allow backspacing over everything
 set encoding=utf-8
 set exrc " read .vimrc, .exrc and .gvimrc
-set history=1000 " remember the last 1000 commands
-set incsearch " show search matches as you type
+set history=1000 " Remember the last 1000 commands
+set hlsearch
+set incsearch " Show search matches as you type
 set list
 "set listchars=tab:..,trail:⌫,extends:…,nbsp:_
 set listchars=extends:…,tab:\ \ ,trail:⌫
 " Some other cool stuff to use: ᅴ ᗛ ← ↔ ↝ ↠ ↤ ↩ ↲ ↺ ↻ ⇐ ⇠ ⇤ ⇥ ⇰ ∞ ⌦ ⌫ ⌧ ⏎ ☢ ☥ ☯ ☹ ☺
 set noerrorbells " Don't beep at me, ever
-set noexpandtab
+set noexpandtab " Use tabs for tabs, not spaces for tabs
 set nowrap
 set number " Show line numbers
 set ruler
+
 set showcmd
 set showmatch " Show matching parenthesis
-set title " change the window's title to the current filename
+set title " Change the window's title to the current filename
 set undolevels=9001
 set vb " Verbose error messaging just in case
 set visualbell
