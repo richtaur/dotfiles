@@ -41,7 +41,6 @@ set backspace=indent,eol,start " Allow backspacing over everything
 set encoding=utf-8
 set exrc " read .vimrc, .exrc and .gvimrc
 set history=1000 " Remember the last 1000 commands
-set hlsearch
 set incsearch " Show search matches as you type
 set list
 "set listchars=tab:..,trail:⌫,extends:…,nbsp:_
