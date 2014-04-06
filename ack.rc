@@ -1,2 +1,3 @@
 --type-add=css=.less
 --type-add=js=.json
+--ignore-dir=_site
