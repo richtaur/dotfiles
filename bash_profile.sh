@@ -1,16 +1,24 @@
 export COMPUTERNAME='Belmont'
 
 # Set iTerm's tab titles
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${COMPUTERNAME}: ${PWD/#$HOME/~}\007"'
+#export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${COMPUTERNAME}: ${PWD/#$HOME/~}\007"'
 
+# Set the command prompt, eg:
+# [richtaur@Belmont:Lost Decade](master)> cd ..
+#export PS1="[\e[0;32m\]\u@${COMPUTERNAME}:\W\[\e[m\]]\[\e[1;32m\]\[\e[m\]\$(get_branch)> "
+
+# rampart(master)> cd ..
+export PS1="\[\033[32m\]\W\$(get_branch)>\[\033[0m\] "
+#PS1='\[\033[31m\]\u@\h:\w\$\[\033[0m\]'
+
+alias desktopcleanup='rm ~/Desktop/Screen*\(*.png'
 alias gvimrc='vim ~/.gvimrc'
 alias ip='ifconfig | grep inet'
 alias lakitu='ssh richtaur@74.207.252.123'
-alias sshldg='ssh git@dev.lostdecadegames.com'
 alias osrc='vim ~/dev/projects/dotfiles/belmont/osx_setup.md'
+alias sshldg='ssh git@dev.lostdecadegames.com'
 alias vim='mvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-alias desktopcleanup='rm ~/Desktop/Screen*\(*.png'
 
 # usage: ogg example.mp3 example.ogg
 ogg() {
@@ -43,10 +51,11 @@ alias '.l'='..; l'
 alias c='clear'
 alias ds='djinn serve'
 alias flushdns='dscacheutil -flushcache'
-alias hasinternet='ping google.com'
 alias hosts='sudo vim /etc/hosts'
+alias jsp='jekyll serve --drafts -w -p'
 alias l='ls -lah'
 alias ll='ls -lah'
+alias pg='ping google.com'
 alias rc='/usr/bin/vim ~/.bash_profile; source $_'
 alias vimrc='vim ~/.vimrc'
 
@@ -54,13 +63,13 @@ alias vimrc='vim ~/.vimrc'
 alias '..'='cd ..'
 alias 'cd-'='cd -'
 alias 'cd..'='cd ..'
-alias art='cd ~/art'
 alias dev='cd ~/dev'
-alias devldg='cd ~/dev/lost_decade'
-alias ldg='cd ~/Dropbox/Lost\ Decade'
-alias lostcast='cd ~/audio/Logic/Lostcast'
-alias manor='cd ~/dev/lost_decade/manor; jekyll'
+alias devldg='cd ~/dev/ldg'
+alias howto='cd ~/dev/howto'
+alias manor='cd ~/dev/ldg/manor; jekyll serve --drafts -w -p 4000'
 alias p='cd ~/dev/projects'
+alias tools='cd ~/dev/tools'
+alias web='cd /Library/WebServer'
 
 # Git
 git config --global user.name "Matt Hackett"
@@ -69,13 +78,15 @@ git config --global core.excludesfile ~/.gitignore_global
 get_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+alias changelog='git log --pretty=format:"%s" -n 100'
 alias gfa='git fetch -a'
 alias gba='git branch -a'
+alias gca='git commit -a'
 alias gcm='git commit -m'
 alias gcam='git commit -am'
 alias gd='git difftool'
 alias gitsubup='git submodule update --init'
-alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative -n 100'
+alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
 alias gpullm='git pull origin master'
 alias gpushm='git push origin master'
 alias grem='git remote -v'
@@ -104,15 +115,16 @@ export PATH="${PATH}:/opt/local/include"
 export PATH="${PATH}:/opt/local/apache2/include"
 export PATH="${PATH}:/usr/local/include"
 export PATH="${PATH}:/usr/local/share/npm/bin"
-export PATH="${PATH}:${HOME}/dev/lost_decade/djinn/tools/bin"
-
-# Set the command prompt, eg:
-# [richtaur@Belmont:Lost Decade](master)> cd ..
-export PS1="[\e[0;32m\]\u@${COMPUTERNAME}:\W\[\e[m\]]\[\e[1;32m\]\[\e[m\]\$(get_branch)> "
+export PATH="${PATH}:${HOME}/dev/ldg/djinn/tools/bin"
 
 ###############################################################################
 # Macros
 ###############################################################################
+
+# Change directory to forefront Finder window folder
+cdf() {
+  cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
+}
 
 cpfilename() {
 	ls $1 | pbcopy
@@ -135,9 +147,25 @@ png() {
 	ls -lh $1
 }
 
+cropbelmont() {
+	find ./ -name "*.png" -exec mogrify -crop 960x640+360+250 {} \;
+}
+
+cropdell() {
+	find ./ -name "*.png" -exec mogrify -crop 960x640+480+325 {} \;
+}
+
+cropwacom() {
+	find ./ -name "*.png" -exec mogrify -crop 960x640+160+125 {} \;
+}
+
 # Usage: croppngs WIDTHxHEIGHT+X+Y filename
 croppngs() {
 	find ./ -name "*.png" -exec mogrify -crop $1 {} \;
+}
+
+crop960() {
+	find ./ -name "*.png" -exec mogrify -crop 960x640+480+325 {} \;
 }
 
 resizepngs() {
