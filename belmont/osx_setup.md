@@ -6,14 +6,15 @@
 * `defaults write -g NSNavPanelExpandedStateForSaveMode -bool TRUE`
 * `defaults write com.apple.Safari IncludeDebugMenu YES`
 * `defaults write org.vim.MacVim MMNativeFullScreen 0`
+* `defaults write com.apple.finder AppleShowAllFiles TRUE`
 * `git config --global user.name "Matt Hackett"`
 * `git config --global user.email "richtaur@gmail.com"`
 
 ## Apache
 
 * `cd /Library/WebServer; sudo rm -rf Documents; sudo ln -s ~/dev ./Documents`
-* `sudo vim /private/etc/apache2/httpd.conf`
-	- uncomment the line `LoadModule php5_module        libexec/apache2/libphp5.so`
+* sudo vim /etc/apache2/httpd.conf
+	- uncomment the line `LoadModule php5_module libexec/apache2/libphp5.so`
 
 ## Preferences
 
@@ -61,18 +62,21 @@
 	- Sidebar / SEARCH FOR
 		* (uncheck all)
 * iTerm
-	- Bookmarks / Manage Profiles … / Terminal Profiles / Default / [x] Silence terminal bell
-	- Bookmarks / Manage Profiles … / Display Profiles / Light Background / (make it look like Dark Background)
+	- Profiles / Open Profiles… / Edit Profiles… / Default / Colors / Light Background / (make it look like Dark Background)
+	- Preferences / Appearance / Display / [ ] Dim inactive split panes
+
+(these rae probably deprecated)
 	- General / Windows / [ ] Use Lion-style Fullscreen windows
 * iTunes
 	- Advanced / [ ] Copy files to iTunes Media folder …
-	- View / [x] as List
 	- View / View Options… / Show Columns / [x] Date Added
 	- View / View Options… / Show Columns / [ ] Rating
 	- General / When you insert a CD: / Import Settings…
 		* Import Using: / AAC Encoder
-* Keychain Access
-	- General / [x] Show Status in Menu Bar
+* Logic
+	- Preferences / General / Editing / Right Mouse Button: / Is Assignable to a Tool
+* Marked
+	- Behavior / [x] Convert fenced code blocks
 * Safari
 	- Advanced / [x] Show Develop menu in menu bar
 * Songbird
