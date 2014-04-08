@@ -2,6 +2,9 @@
 " Hacks, etc.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" TODO: map "rt" to:
+" %retab!
+
 set nocompatible " SET THIS FIRST! Use new hotness that's not compatible with Vi
 "set hidden " Instead of closing buffers, hide them
 
@@ -12,7 +15,7 @@ nnoremap ; :
 syntax on
 syntax sync fromstart
 autocmd BufReadPost * syntax sync fromstart
-filetype plugin indent on
+"filetype plugin indent on
 
 " Allows multiple lines to be pasted correctly
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
@@ -51,7 +54,6 @@ set noexpandtab " Use tabs for tabs, not spaces for tabs
 set nowrap
 set number " Show line numbers
 set ruler
-
 set showcmd
 set showmatch " Show matching parenthesis
 set title " Change the window's title to the current filename
