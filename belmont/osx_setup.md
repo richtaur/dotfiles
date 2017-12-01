@@ -20,6 +20,10 @@ This is a constantly out-of-sync, sometimes useless text description of some mis
 
 ## Preferences
 
+* Adobe Illustrator (CS5)
+	- 
+	- Appearance / … / [ ] New Art Has Basic Appearance
+
 * Adobe Photoshop (CS5)
 	- General / [ ] Export Clipboard
 	- General / Image Interpolation: Bilinear
