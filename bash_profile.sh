@@ -15,12 +15,6 @@ ogg() {
 }
 
 ###############################################################################
-# Sources
-###############################################################################
-
-source /usr/local/etc/bash_completion.d/git-completion.bash
-
-###############################################################################
 # Aliases
 ###############################################################################
 
@@ -65,19 +59,12 @@ export EDITOR='/usr/bin/vim'
 
 # PATH
 export PATH=''
-export PATH="${PATH}:/opt/local/bin"
-export PATH="${PATH}:/opt/local/sbin"
 export PATH="${PATH}:/usr/local/bin"
 export PATH="${PATH}:/usr/bin"
 export PATH="${PATH}:/bin"
 export PATH="${PATH}:/usr/sbin"
 export PATH="${PATH}:/sbin"
-export PATH="${PATH}:/usr/X11/bin"
-export PATH="${PATH}:/opt/local/include"
-export PATH="${PATH}:/opt/local/apache2/include"
 export PATH="${PATH}:/usr/local/include"
-export PATH="${PATH}:/usr/local/share/npm/bin"
-#export PATH="${PATH}:${HOME}/dev/ldg/djinn/tools/bin"
 
 # Android
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
