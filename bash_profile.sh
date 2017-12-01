@@ -70,7 +70,7 @@ export PATH="${PATH}:/usr/local/include"
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
 export ANDROID_NDK_ROOT="${HOME}/dev/android/android-ndk-r12b"
 export ANDROID_NDK_HOME="${ANDROID_NDK_ROOT}"
-export PATH="${PATH}:${ANDROID_HOME}"
+export PATH="${PATH}:${ANDROID_HOME}/platform-tools"
 export PATH="${PATH}:${ANDROID_NDK_ROOT}"
 
 ###############################################################################
