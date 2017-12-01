@@ -25,7 +25,7 @@ set foldclose=all
 set nofoldenable
 
 " Show file types in menu
-let do_syntax_sel_menu = 1|runtime~! synmenu.vim|aunmenu &Syntax.&Show\ filetypes\ in\ menu
+"let do_syntax_sel_menu = 1|runtime~! synmenu.vim|aunmenu &Syntax.&Show\ filetypes\ in\ menu
 
 " TODO: No idea WTF these are doing…
 set guioptions-=T
