@@ -1,6 +1,6 @@
 # dotfiles
 
-@richtaur's computing configuration. More about my setup: http://www.richtaur.com/setup/
+@richtaur's computing configuration. More about my setup: http://www.richtaur.com/
 
 ## Contents
 
@@ -12,5 +12,3 @@
 	lakitu/ ........... settings specific to my web server
 	vim/ .............. alias to ~/.vim
 	vim.rc ............ alias to ~/.vimrc
-
-If you have any questions, it's easiest to contact me via [Twitter](https://twitter.com/richtaur).
