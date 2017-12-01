@@ -7,6 +7,9 @@ export COMPUTERNAME='Belmont'
 # [richtaur@Belmont:Lost Decade](master)> cd ..
 #export PS1="[\e[0;32m\]\u@${COMPUTERNAME}:\W\[\e[m\]]\[\e[1;32m\]\[\e[m\]\$(get_branch)> "
 
+# Include my stinking key
+ssh-add -K ~/.ssh/id_rsa
+
 # rampart(master)> cd ..
 export PS1="\[\033[32m\]\W\$(get_branch)>\[\033[0m\] "
 #PS1='\[\033[31m\]\u@\h:\w\$\[\033[0m\]'
@@ -15,14 +18,20 @@ alias desktopcleanup='rm ~/Desktop/Screen*\(*.png'
 alias gvimrc='vim ~/.gvimrc'
 alias ip='ifconfig | grep inet'
 alias lakitu='ssh richtaur@74.207.252.123'
+alias monotostereo='ffmpeg -i $1 -ac 1 output.mp4'
 alias osrc='vim ~/dev/projects/dotfiles/belmont/osx_setup.md'
 alias sshldg='ssh git@dev.lostdecadegames.com'
 alias vim='mvim'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 
-# usage: ogg example.mp3 example.ogg
+# usage: ogg example.mp3
+# example.mp3 -> example.ogg
 ogg() {
-	vlc -I dummy $1 --sout="#transcode{scale=1,acodec=vorbis,ab=192,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=$2}" vlc://quit
+	vlc -I dummy $1.mp3 --sout="#transcode{scale=1,acodec=vorbis,ab=192,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=$1.ogg}" vlc://quit
+	#PARAM="$1"
+	#FILE="${PARAM%%.*}"
+	#echo ${FILE}
+	#vlc -I dummy ${FILE}.mp3 --sout="#transcode{scale=1,acodec=vorbis,ab=192,channels=2,samplerate=44100}:std{access=file,mux=ogg,dst=${FILE}.ogg}" vlc://quit
 }
 
 # usage: ogg96 example.mp3 example.ogg
@@ -66,7 +75,8 @@ alias 'cd..'='cd ..'
 alias dev='cd ~/dev'
 alias devldg='cd ~/dev/ldg'
 alias howto='cd ~/dev/howto'
-alias manor='cd ~/dev/ldg/manor; jekyll serve --drafts -w -p 4000'
+alias manor='cd ~/dev/ldg/manor; make develop'
+#alias manor='cd ~/dev/ldg/manor; jekyll serve --drafts -w -p 4000'
 alias p='cd ~/dev/projects'
 alias tools='cd ~/dev/tools'
 alias web='cd /Library/WebServer'
@@ -87,10 +97,12 @@ alias gcam='git commit -am'
 alias gd='git difftool'
 alias gitsubup='git submodule update --init'
 alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
+alias glog2='git log --pretty=format:"%d %s (%cr)" --date=relative'
 alias gpullm='git pull origin master'
 alias gpushm='git push origin master'
 alias grem='git remote -v'
-alias gs='git status'
+alias gs='git status -sb'
+alias gsui='git submodule update --init'
 
 # Applications
 alias telog='tail -f /var/log/apache2/error_log'
@@ -102,6 +114,8 @@ alias top='top -o cpu'
 
 export CLICOLOR='1'
 export EDITOR='/usr/bin/vim'
+
+# PATH
 export PATH=''
 export PATH="${PATH}:/opt/local/bin"
 export PATH="${PATH}:/opt/local/sbin"
@@ -117,9 +131,22 @@ export PATH="${PATH}:/usr/local/include"
 export PATH="${PATH}:/usr/local/share/npm/bin"
 export PATH="${PATH}:${HOME}/dev/ldg/djinn/tools/bin"
 
+# Android
+export ANDROID_HOME="${HOME}/Library/Android/sdk"
+export ANDROID_NDK_ROOT="${HOME}/dev/android-ndk-r12b"
+export ANDROID_NDK_HOME="${ANDROID_NDK_ROOT}"
+export PATH="${PATH}:${ANDROID_HOME}"
+export PATH="${PATH}:${ANDROID_NDK_ROOT}"
+#export PATH="${PATH}:${ANDROID_HOME}/platform-tools"
+#export PATH="${PATH}:${ANDROID_NDK_ROOT}/platform-tools"
+
 ###############################################################################
 # Macros
 ###############################################################################
+
+audiopad() {
+	ffmpeg -y -i $1 -filter_complex "apad=pad_len=16000" $1
+}
 
 # Change directory to forefront Finder window folder
 cdf() {
@@ -137,7 +164,6 @@ lad() {
 lameit() {
 	lame -V 4 $1.wav
 	mv $1.wav.mp3 $1.mp3
-	rm $1.wav
 }
 
 png() {
@@ -147,12 +173,28 @@ png() {
 	ls -lh $1
 }
 
+cropawl2() {
+	find ./ -name "*.png" -exec mogrify -crop 1280x720+200+211 {} \;
+}
+
 cropbelmont() {
 	find ./ -name "*.png" -exec mogrify -crop 960x640+360+250 {} \;
 }
 
+cropbelmontgif() {
+	find ./ -name "*.png" -exec mogrify -crop 480x320+600+410 {} \;
+}
+
 cropdell() {
+	find ./ -name "*.png" -exec mogrify -crop 1280x720+320+285 {} \;
+}
+
+cropawl() {
 	find ./ -name "*.png" -exec mogrify -crop 960x640+480+325 {} \;
+}
+
+cropdellgif() {
+	find ./ -name "*.png" -exec mogrify -crop 480x320+720+485 {} \;
 }
 
 cropwacom() {
@@ -175,4 +217,9 @@ resizepngs() {
 untargz() {
 	gzip -d $1
 	tar -xvf $1
+}
+
+wavetoweb() {
+	lameit $1
+	ogg $1
 }
