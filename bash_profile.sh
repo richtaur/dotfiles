@@ -20,6 +20,7 @@ ogg() {
 
 # Misc
 alias c='clear'
+alias convert='for i in *.png; do sips -s format jpeg -s formatOptions 100 "${i}" --out "${i%png}jpg"; done'
 alias l='ls -lah'
 alias ll='ls -lah'
 alias pg='ping google.com'
