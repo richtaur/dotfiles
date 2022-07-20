@@ -3,7 +3,7 @@
 echo "You're in MY terminal now!"
 
 # Include my SSH key pairs
-ssh-add -K ~/.ssh/id_rsa
+ssh-add --apple-use-keychain ~/.ssh/id_rsa
 
 ## Aliases
 
