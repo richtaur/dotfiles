@@ -22,8 +22,8 @@ alias gcam='git commit -am'
 #alias gd='git difftool'
 alias gfa='git fetch -a'
 alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
-alias gpullm='git pull origin master'
-alias gpushm='git push origin master'
+alias gpullm='git pull origin main'
+alias gpushm='git push origin main'
 alias gs='git status -sb'
 
 # Change directory to forefront Finder window folder
