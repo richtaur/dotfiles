@@ -12,7 +12,6 @@ alias 'cd..'='cd ..'
 alias p='cd ~/dev/personal'
 alias dev='cd ~/dev'
 alias devv='cd ~/dev/valadria'
-alias top='top -o cpu'
 
 ## Git Aliases
 
