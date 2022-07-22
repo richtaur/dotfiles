@@ -30,6 +30,10 @@ cdf() {
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
+## PATH
+
+export PATH="$PATH:$HOME/dev/ldg/djinn/tools/bin"
+
 ##### BELOW HERE IS ZSH'S DEFAULT RC FILE #####
 
 # If you come from bash you might have to change your $PATH.
