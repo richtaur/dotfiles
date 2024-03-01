@@ -1,6 +1,7 @@
 # richtaur's zsh Config
 # Never used zsh before! Let's a-go.
-echo "You're in MY terminal now!"
+
+echo "You're in MY terminal now!! v1.0.0"
 
 # Include my SSH key pairs
 ssh-add --apple-use-keychain ~/.ssh/id_rsa
@@ -12,6 +13,9 @@ alias 'cd..'='cd ..'
 alias p='cd ~/dev/personal'
 alias dev='cd ~/dev'
 alias devv='cd ~/dev/valadria'
+alias love="/Applications/love.app/Contents/MacOS/love"
+alias ext="cd ~/dev/external"
+alias ffmepg="ffmpeg"
 
 ## Git Aliases
 
@@ -20,7 +24,8 @@ alias gcm='git commit -m'
 alias gcam='git commit -am'
 #alias gd='git difftool'
 alias gfa='git fetch -a'
-alias glog='git log --pretty=format:"%Cred%h%Creset %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
+alias glorg='git log --pretty=format:"%ad [%Cred%h%Creset] %Cblue%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative --date=format:"%Y-%m-%d"'
+# git log --pretty=format:"[%h] (%ad): %s" --date=format:"%Y-%m-%d"
 alias gpullm='git pull origin main'
 alias gpushm='git push origin main'
 alias gs='git status -sb'
@@ -33,6 +38,14 @@ cdf() {
 ## PATH
 
 export PATH="$PATH:$HOME/dev/ldg/djinn/tools/bin"
+export PATH="$PATH:$HOME/Library/Application Support/itch/apps/butler"
+
+# Godot
+# export DOTNET_ROOT=/usr/local/share/dotnet/x64
+# PATH=$PATH:$DOTNET_ROOT
+# export DOTNET_ROOT=/usr/local/bin/dotnet
+export DOTNET_ROOT=/usr/local/share/dotnet
+export PATH=$PATH:$DOTNET_ROOT
 
 ##### BELOW HERE IS ZSH'S DEFAULT RC FILE #####
 
