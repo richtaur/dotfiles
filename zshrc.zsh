@@ -150,3 +150,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# brew
+
+export PATH=$PATH:/opt/homebrew/bin
