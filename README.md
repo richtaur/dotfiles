@@ -4,7 +4,9 @@
 
 ## Installation
 
-Run these commands your home folder:
+Symlink the project files to map to your local config files.
+
+One way to do that is to run these commands your home folder:
 
 ```
 ln -s dev/personal/dotfiles/zshrc.zsh .zshrc

@@ -11,6 +11,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_rsa
 alias c="clear"
 alias 'cd..'='cd ..'
 alias p='cd ~/dev/personal'
+alias deck='ssh deck@192.168.86.78'
 alias dev='cd ~/dev'
 alias devv='cd ~/dev/valadria'
 alias love="/Applications/love.app/Contents/MacOS/love"
@@ -28,6 +29,9 @@ alias glorg='git log --pretty=format:"%ad [%Cred%h%Creset] %Cblue%an%d%Creset %s
 # git log --pretty=format:"[%h] (%ad): %s" --date=format:"%Y-%m-%d"
 alias gpullm='git pull origin main'
 alias gpushm='git push origin main'
+alias gpulld='git pull origin develop'
+alias gpushd='git push origin develop'
+alias gpushs='git push origin steam'
 alias gs='git status -sb'
 
 # Change directory to forefront Finder window folder
@@ -123,7 +127,8 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# Source Oh My Zsh only when using Z shell
+[[ "$SHELL" == "/bin/zsh" ]] && source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -152,5 +157,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # brew
-
 export PATH=$PATH:/opt/homebrew/bin
+export PATH=$PATH:/opt/homebrew/opt/yarn/bin
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/richtaur/dev/stowaway/dockable-js/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/richtaur/dev/stowaway/dockable-js/node_modules/tabtab/.completions/electron-forge.zsh
