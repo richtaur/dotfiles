@@ -1,7 +1,7 @@
 # richtaur's zsh Config
-# Never used zsh before! Let's a-go.
+## Never used zsh before! Let's a-go.
 
-echo "You're in MY terminal now!! v1.0.0"
+echo "You're in MY terminal now!! v1.1.0"
 
 # Include my SSH key pairs
 ssh-add --apple-use-keychain ~/.ssh/id_rsa
@@ -14,6 +14,8 @@ alias p='cd ~/dev/personal'
 alias deck='ssh deck@192.168.86.78'
 alias dev='cd ~/dev'
 alias devv='cd ~/dev/valadria'
+alias l="ls -lah"
+alias ll="ls -lh"
 alias love="/Applications/love.app/Contents/MacOS/love"
 alias ext="cd ~/dev/external"
 alias ffmepg="ffmpeg"
