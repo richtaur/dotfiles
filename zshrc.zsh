@@ -41,6 +41,14 @@ cdf() {
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
+# Homebrew
+brew_update() {
+  brew update
+  brew bundle install --cleanup --file=~/.Brewfile
+  brew upgrade
+  brew cleanup
+}
+
 ## PATH
 
 export PATH="$PATH:$HOME/dev/ldg/djinn/tools/bin"
