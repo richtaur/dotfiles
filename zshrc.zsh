@@ -137,6 +137,10 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# Oh My Zsh
+# Remove "Would you like to update?" nagging
+# You can update manually by running `omz update`
+DISABLE_AUTO_UPDATE="true"
 # Source Oh My Zsh only when using Z shell
 [[ "$SHELL" == "/bin/zsh" ]] && source $ZSH/oh-my-zsh.sh
 
