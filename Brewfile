@@ -45,3 +45,7 @@ brew "yarn"
 # yt-dlp: A feature-rich command-line audio/video downloader
 # https://github.com/yt-dlp/yt-dlp
 brew "yt-dlp"
+
+# halloy: 
+# https://halloy.chat/
+cask "halloy"
