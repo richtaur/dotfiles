@@ -44,7 +44,7 @@ cdf() {
 # Homebrew
 brew_update() {
   brew update
-  brew bundle install --cleanup --file=~/.Brewfile
+  brew bundle install --file=~/.Brewfile
   brew upgrade
   brew cleanup
 }
