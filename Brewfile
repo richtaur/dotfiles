@@ -46,6 +46,10 @@ brew "yarn"
 # https://github.com/yt-dlp/yt-dlp
 brew "yt-dlp"
 
-# halloy: 
+# halloy: IRC
 # https://halloy.chat/
 cask "halloy"
+
+# Markdown Previewer
+# https://markdownpreview.app/
+cask "markdown-preview"
