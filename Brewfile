@@ -38,6 +38,10 @@ brew "node"
 # https://developers.google.com/speed/webp/
 brew "webp"
 
+# wget: Internet file retriever
+# https://formulae.brew.sh/formula/wget
+brew "wget"
+
 # Yarn: Package manager
 # https://yarnpkg.com/
 brew "yarn"
